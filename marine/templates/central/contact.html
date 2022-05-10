@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block seo %}
+
+
+<title>Moby Marine | {% trans 'İletişim' %} </title>
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<link rel="canonical" href=""/>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<meta name="robots" content="index,follow"/>
+
+<meta name="googlebot" content="index,follow"/>
+
+<meta name="author" content="İhsan Gürol Demirtaş">
+
+<meta name="publisher" content="2020.01" />
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+	<section class="contact-info-section">
+
+				<div class="container">
+					<div class="title-box">
+
+						<h2>{% trans 'Bize Ulaşın' %}</h2>
+					</div>
+					<div class="contact-info-box">
+						<div class="row g-0">
+
+							<div class="col-lg-4">
+								<div class="contact-info-post">
+									<i class="fas fa-phone"></i>
+									<div class="info-content">
+										<h4>{% trans 'Telefon' %}</h4>
+										<p>+90 252 419 2351</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<div class="contact-info-post">
+									<i class="fas fa-clock"></i>
+									<div class="info-content">
+										<h4>Çalışma Saatleri</h4>
+										<p>Pazartesi - Cuma   /  09:00-17:00</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4">
+								<div class="contact-info-post">
+									<i class="fas fa-map-marker-alt"></i>
+									<div class="info-content">
+										<h4>Adres</h4>
+										<p>Ata Sanayi Sit. 280 sok. No:30</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="contact-form-box">
+						<div class="row g-0">
+							<div class="col-lg-8">
+								<form id="contact-form" method="POST">
+									{% csrf_token %}
+									<h4>{% trans 'İstekleriniz' %}</h4>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="input-line">
+												<label for="name"><i class="fas fa-user"></i></label>
+												<input name="name" id="name" type="text" placeholder="{% trans 'İsim' %}">
+											</div>
+											<div class="input-line">
+												<label for="mail"><i class="fas fa-envelope"></i></label>
+												<input name="email" id="mail" type="text" placeholder="{% trans 'E-mail' %}">
+											</div>
+											<div class="input-line">
+												<label for="website"><i class="fas fa-link"></i></label>
+												<input name="website" id="website" type="text" placeholder="{% trans 'Konu' %}">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="input-line">
+												<textarea name="comment" id="comment" placeholder="Message"></textarea>
+											</div>
+											<button name='btnSubmit' type="submit" >
+												{% trans 'Gönder' %}
+											</button>
+										</div>
+									</div>
+									<div id="msg"></div>
+								</form>
+							</div>
+							<div class="col-lg-4">
+								<!--div id="map"></div-->
+								<div><iframe width="390" height="310" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Ata%20Sanayi%20Sit.%20280%20sok.%20No:30+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/marine-gps/">boat tracking</a></iframe></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+{% endblock %}
+
+
+{% block jss %}
+{% endblock %}

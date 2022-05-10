@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% load static i18n %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block seo %}
+
+
+<title>Moby Marine</title>
+
+<meta name="description" content="" />
+
+<meta name="keywords" content="" />
+
+<link rel="canonical" href=""/>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+
+<meta name="robots" content="index,follow"/>
+
+<meta name="googlebot" content="index,follow"/>
+
+<meta name="author" content="İhsan Gürol Demirtaş">
+
+<meta name="publisher" content="2020.01" />
+
+{% endblock %}
+
+
+
+
+{% block content %}
+
+<section class="scroller-section3">
+
+				<div class="scroller-box owl-wrapper">
+					<div class="owl-carousel owl-theme" data-num="3">
+						{% for product in products %}
+						<div class="item">
+							<div class="scroller-post">
+								<div class="image-holder">
+									<img src="{% if product.image %}{{ product.image.url }}{% else %}{% endif %}" alt="s1">
+								</div>
+								<div class="hover-box">
+									<a class="cat-link" href="/">{{product.name}}</a>
+									<h4><a href="/">{{product.title}}</a></h4>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+
+			</section>
+			<section class="services-section5">
+
+				<div class="container">
+					<div class="title-box">
+						<span>The art of building</span>
+						<h2>Building Exellence</h2>
+					</div>
+					<div class="services-box5">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="services-post5">
+									<div class="icon">
+										<span class="material-icons-outlined">
+										app_registration
+										</span>
+									</div>
+									<div class="serv-content">
+										<h4>Creative Architecture designs</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
+									</div>
+								</div>
+
+								<div class="services-post5">
+									<div class="icon">
+										<span class="material-icons-outlined">
+										crop_rotate
+										</span>
+									</div>
+									<div class="serv-content">
+										<h4>The joy of Best Living</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
+									</div>
+								</div>
+
+								<div class="services-post5">
+									<div class="icon">
+										<span class="material-icons-outlined">
+										straighten
+										</span>
+									</div>
+									<div class="serv-content">
+										<h4>Professional Planning</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="services-post5">
+									<div class="icon">
+										<span class="material-icons-outlined">
+										cottage
+										</span>
+									</div>
+									<div class="serv-content">
+										<h4>Crafting at its best</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
+									</div>
+								</div>
+
+								<div class="services-post5">
+									<div class="icon">
+										<span class="material-icons-outlined">
+											architecture
+										</span>
+									</div>
+									<div class="serv-content">
+										<h4>Building good foundations</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
+									</div>
+								</div>
+
+								<div class="services-post5">
+									<div class="icon">
+										<span class="material-icons-outlined">
+										highlight
+										</span>
+									</div>
+									<div class="serv-content">
+										<h4>Quality what you want Today</h4>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+
+{% endblock %}
+
+
+{% block jss %}
+{% endblock %}

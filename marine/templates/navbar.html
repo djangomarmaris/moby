@@ -1,0 +1,89 @@
+{% load static i18n %}
+<div id="ip-container" class="ip-container">
+	<!-- initial loader -->
+	<div class="ip-header">
+
+		<p class="ip-logo">
+			<img width="500" src="{% static '3.png' %}" alt="">
+		</p>
+
+		<div class="ip-loader">
+			<svg class="ip-inner" width="100px" height="100px" viewBox="0 0 80 80">
+				<path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+				<path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+			</svg>
+		</div>
+
+	</div>
+
+	<!-- Container -->
+	<div id="container">
+
+		<!-- Header
+		    ================================================== -->
+		<header class="clearfix">
+
+			<div class="logo">
+				<a href="/"><img src="{% static '4.png' %}" alt=""></a>
+			</div>
+
+			<div class="header-line">
+				<a class="open-menu-toggle" href="#">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<div class="social-line">
+					{% for social in socials %}
+					<ul class="social-list">
+						<li>
+							<a href="{{social.fb}}"><i class="fab fa-facebook-square"></i></a>
+						</li>
+						<li>
+							<a href="{{social.insta}}"><i class="fab fa-instagram"></i></a>
+						</li>
+					</ul>
+					{% endfor %}
+				</div>
+				<div class="copyright-line">
+					<a href="www.centralwebagency.com" target="_blank">
+					<p>© CWA 2022</p>
+					</a>
+				</div>
+			</div>
+
+			<nav class="nav-menu-box">
+				<ul class="navigation-menu-list">
+					<li class="menu-item-has-children">
+						<a href="index.html"><span><em>{% trans 'ANA SAYFA' %}</em></span></a>
+					</li>
+					<li>
+						<a href="/moby-marine/about/"><span><em> ELVSTRØM SAILS {% trans 'TÜRKİYE' %}</em></span></a>
+
+					</li>
+					<li>
+						<a href="/moby-marine/istec/"><span><em>ISTEC</em></span></a>
+					</li>
+					<li>
+						<a href="/moby-marine/contact/"><span><em>{% trans 'İLETİŞİM' %}</em></span></a>
+					</li>
+				</ul>
+			</nav>
+
+		</header>
+		<!-- End Header -->
+
+		<div id="content">
+
+
+			<div class="info-box">
+				<p>
+					<i class="fa fa-phone-square"></i>
+					+90 252 419 2351
+					<span class="divider-line"></span>
+
+					<i class="fa fa-envelope-square"></i>
+					info@mobymarine.com.tr
+				</p>
+			</div>
+
